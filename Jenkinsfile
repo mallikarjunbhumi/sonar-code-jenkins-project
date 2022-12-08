@@ -21,13 +21,13 @@ node {
       sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore test"
   }
   stage ('Package') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore package"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore package -d"
   }
   stage ('Verify') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore verify"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore verify -d"
   }
   stage ('Install') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore install"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore install -d"
   }
   stage ('Deliver & Deployment') {
       sh 'curl -u admin:redhat@123 -T target/**.war "http://54.221.91.226:8080/manager/text/deploy?path=/kesav&update=true"'
