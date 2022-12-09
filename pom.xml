@@ -28,9 +28,9 @@
 		
 		<!-- SonarQube Integration -->
 		<sonar.organization>peoject-test</sonar.organization>
-		<sonar.projectKey>uday</sonar.projectKey>
+		<sonar.projectKey>mavon</sonar.projectKey>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-		<sonar.login>cc13c7c3a65ffd5425f59876f5092e21e73ae4ea</sonar.login>
+		<sonar.login>b56be6764ee89b1fc5a12a67de4c58ab673c2521</sonar.login>
 	</properties>
 	
 	<!-- Jfrog Integration with POM.xml file -->
