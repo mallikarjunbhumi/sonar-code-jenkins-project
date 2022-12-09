@@ -5,7 +5,7 @@ node {
       mvnHome = tool 'maven'
    }
   stage ('Code Quality') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore sonar:sonar"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore sonar:sonar -DskipTests"
   }
 
   stage ('Clean') {
@@ -18,16 +18,16 @@ node {
       sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore compile"
   }
   stage ('Test') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore test"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore test -DskipTests"
   }
   stage ('Package') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore package -D"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore package -DskipTests"
   }
   stage ('Verify') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore verify -D"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore verify -DskipTests"
   }
   stage ('Install') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore install -D"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore install"
   }
   stage ('Deliver & Deployment') {
       sh 'curl -u admin:redhat@123 -T target/**.war "http://18.212.99.251:8080/manager/text/deploy?path=/uday&update=true"'
