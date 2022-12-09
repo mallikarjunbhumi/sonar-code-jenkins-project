@@ -41,9 +41,9 @@
         <url>https://cloudbinary.jfrog.io/artifactory/example-repo-local/</url>
     </snapshotRepository>
     <repository>
-        <id>example-repo-local</id>
-        <name>example-repo-local</name>
-        <url>https://cloudbinary.jfrog.io/artifactory/example-repo-local/</url>
+        <id>central</id>
+        <name>a0brf71ajhglw-artifactory-primary-0-releases</name>
+        <url>https://uday8.jfrog.io/artifactory/libs-release</url>
     </repository>
 </distributionManagement>
 
