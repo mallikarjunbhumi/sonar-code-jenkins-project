@@ -27,7 +27,7 @@ node {
       sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore verify -DskipTests"
   }
   stage ('Install') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore install"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore install -DskipTests"
   }
   stage ('Deliver & Deployment') {
       sh 'curl -u admin:redhat@123 -T target/**.war "http://54.242.147.49:8080/manager/text/deploy?path=/uday&update=true"'
