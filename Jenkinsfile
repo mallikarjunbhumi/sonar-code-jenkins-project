@@ -5,7 +5,7 @@ node {
       mvnHome = tool 'maven'
    }
   stage ('Code Quality') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore sonar:sonar -DskipTests"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore sonar:sonar"
   }
 
   stage ('Clean') {
