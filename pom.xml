@@ -47,7 +47,6 @@
     </repository>
 </distributionManagement>
 
-	
 	<scm>
 		<connection>scm:git:git@github.com:kesavkummari/javacodescan.git</connection>
 		<developerConnection>scm:git:git@github.com:kesavkummari/javacodescan.git</developerConnection>
