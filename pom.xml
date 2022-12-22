@@ -27,10 +27,10 @@
 		<jacoco.version>0.7.9</jacoco.version>
 		
 		<!-- SonarQube Integration -->
-		<sonar.organization>peoject-test</sonar.organization>
-		<sonar.projectKey>mavon</sonar.projectKey>
+		<sonar.organization>nandhu</sonar.organization>
+		<sonar.projectKey>malli_bhumi</sonar.projectKey>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-		<sonar.login>b56be6764ee89b1fc5a12a67de4c58ab673c2521</sonar.login>
+		<sonar.login>941b7d389caf25801141049d42b14a8aa3a1a01c</sonar.login>
 	</properties>
 	
 	<!-- Jfrog Integration with POM.xml file -->
